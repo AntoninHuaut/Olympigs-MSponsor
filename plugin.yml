@@ -1,0 +1,8 @@
+name: MSponsor
+author: Maner_
+version: 1.0.0
+main: fr.maner.msponsor.MSponsor
+commands:
+  msponsor:
+    description: Command msponsor
+    aliases: [wl]
