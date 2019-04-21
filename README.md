@@ -1,7 +1,7 @@
 # Olympigs - MSponsor
 ## Introduction
-Plugin crée pour le Projet Olympigs réalisé par [**Nems**](https://twitter.com/Nems_Mt)  
-Permet d'autoriser qu'une liste de joueurs à se connecter au serveur, récupérée depuis une [URL](http://maner.fr:3006/minecraft/users/)
+Plugin crée à l'ocassion du Projet Olympigs organisé par [**Nems**](https://twitter.com/Nems_Mt)  
+Permet d'autoriser une liste de joueurs à se connecter au serveur, celle-ci est récupérée depuis une [URL](http://maner.fr:3006/minecraft/users/)
 
 ## Commandes
 `Commande principale : /wl`
@@ -16,5 +16,5 @@ Permet d'autoriser qu'une liste de joueurs à se connecter au serveur, récupér
 |     toggle     | *msponsor.command.toggle*  |                 Active/Désactive la whitelist                 |
 
 ## Téléchargement
-Le plugin nécessite des modifications pour utilisée une autre liste personnalisée  
+Le plugin nécessite des modifications pour utiliser une autre liste personnalisée  
 [Accéder aux releases](https://github.com/Manerr/Olympigs-MSponsor/releases)
