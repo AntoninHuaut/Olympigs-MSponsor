@@ -1,7 +1,7 @@
 # Olympigs - MSponsor
 ## Introduction
 Plugin crée à l'ocassion du Projet Olympigs organisé par [**Nems**](https://twitter.com/Nems_Mt)  
-Permet d'autoriser une liste de joueurs à se connecter au serveur, celle-ci est récupérée depuis une [URL](http://maner.fr:3006/minecraft/users/)
+Permet d'autoriser une liste de joueurs à se connecter au serveur, celle-ci est récupérée depuis une [URL](https://mlink.maner.fr)
 
 ## Commandes
 `Commande principale : /wl`
