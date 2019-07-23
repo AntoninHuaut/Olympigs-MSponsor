@@ -1,6 +1,6 @@
 name: MSponsor
 author: Maner_
-version: 1.0.0
+version: 1.0.1
 main: fr.maner.msponsor.MSponsor
 commands:
   msponsor:
