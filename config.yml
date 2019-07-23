@@ -1,7 +1,8 @@
 # MSponsor
 #
-GuildDiscord:
-  - "266575825879564288" # Nems
-  - "264154411939397632" # Aypierre
+GamesId:
+  - 2 # Aypierre
+  - 3 # Nems
 #
 KickMsg: "&cVous n'êtes pas dans la whitelist Sponsor\n&eRendez vous sur le Discord"
+RQUrl: "https://mlink.maner.fr/api?id="

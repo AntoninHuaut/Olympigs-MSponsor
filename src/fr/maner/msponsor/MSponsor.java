@@ -15,11 +15,10 @@ import fr.maner.msponsor.utils.WLConfig;
 
 public class MSponsor extends JavaPlugin {
 
-	public final static String URL = "http://maner.fr:3006/minecraft/users/";
-		
 	private boolean activeWL = true;
+	public String urlRQ;
 	private String kickMsg;
-	private List<String> guildsID;
+	private List<Integer> idGames;
 	private Set<String> wlExtra = new HashSet<String>();
 	private Set<String> wlWeb = new HashSet<String>();
 	private RefresWLRun refreshWLRun;
@@ -41,7 +40,8 @@ public class MSponsor extends JavaPlugin {
 		reloadConfig();
 
 		kickMsg = ChatColor.translateAlternateColorCodes('&',getConfig().getString("KickMsg"));
-		guildsID = getConfig().getStringList("GuildDiscord");
+		idGames = getConfig().getIntegerList("GamesId");
+		urlRQ = getConfig().getString("RQUrl");
 		wlExtra = wlConfig.getPlayers();
 		refreshWLRun.refreshWL(null);
 	}
@@ -58,12 +58,16 @@ public class MSponsor extends JavaPlugin {
 		activeWL = !activeWL;
 	}
 	
+	public String getRQUrl() {
+		return urlRQ;
+	}
+	
 	public String getKickMsg() {
 		return kickMsg;
 	}
 	
-	public List<String> getGuildsId() {
-		return guildsID;
+	public List<Integer> getGamesId() {
+		return idGames;
 	}
 	
 	public Set<String> getExtraWL() {

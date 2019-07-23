@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import fr.maner.msponsor.MSponsor;
@@ -45,16 +44,17 @@ public class RefresWLRun implements Runnable {
 	public void getPseudos(Consumer<Set<String>> consumer) {
 		Bukkit.getScheduler().runTaskAsynchronously(pl, () -> {
 			Set<String> pseudos = new HashSet<String>();
-			JsonObject object = Web.getDataURL(MSponsor.URL);
 
-			if(object != null) {
-				pl.getGuildsId().forEach(guild -> {
-					if(object.has(guild)) {
-						JsonArray array = object.get(guild).getAsJsonArray();
-						array.forEach(el -> pseudos.add(el.getAsString()));
-					}
-				});
+			String url = pl.urlRQ + "[";
+			for (int i = 0; i < pl.getGamesId().size(); i++) {
+				url += i == 0 ? pl.getGamesId().get(i) : "," + pl.getGamesId().get(i);
 			}
+			url += "]";
+
+			JsonObject object = Web.getDataURL(url);
+
+			if(object != null)
+				object.get("pseudo").getAsJsonArray().forEach(el -> pseudos.add(el.getAsString()));
 
 			Bukkit.getScheduler().runTask(pl, () -> consumer.accept(pseudos));
 		});
